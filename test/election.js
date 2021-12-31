@@ -27,7 +27,7 @@ contract("Election", function(accounts){
         });
     });
 
-    it("Testa voto", function() {
+    it("Testa se tem como votar", function() {
         return Election.deployed().then(function(instance) {
           electionInstance = instance;
           candidateId = 1;
@@ -42,4 +42,5 @@ contract("Election", function(accounts){
           assert.equal(voteCount, 1, "Voto foi contabilizado");
         })
       });
+
 });
